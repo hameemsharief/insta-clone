@@ -7,7 +7,9 @@ export default function SignupScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');  const handleSignup = async () => {
+  const [confirmPassword, setConfirmPassword] = useState('');  
+  
+  const handleSignup = async () => {
     if (!email || !username || !password || !confirmPassword) {
       toast.error('Please fill in all fields');
       return;

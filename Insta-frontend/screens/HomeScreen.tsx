@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons, Feather } from '@expo/vector-icons';
 
+// Instagram Post Data 
 const MOCK_POSTS = [
   {
     id: '1',

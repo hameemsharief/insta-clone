@@ -5,7 +5,9 @@ import { toast } from 'sonner-native';
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');  const handleLogin = async () => {
+  const [password, setPassword] = useState('');  
+  
+  const handleLogin = async () => {
     if (!email || !password) {
       toast.error('Please fill in all fields');
       return;
