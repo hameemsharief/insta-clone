@@ -10,6 +10,7 @@ export default function SignupScreen({ navigation }) {
   const [confirmPassword, setConfirmPassword] = useState('');  
   
   const handleSignup = async () => {
+    console.log(email,username,)
     if (!email || !username || !password || !confirmPassword) {
       toast.error('Please fill in all fields');
       return;
@@ -21,7 +22,7 @@ export default function SignupScreen({ navigation }) {
     }
 
     try {
-      const response = await fetch('http://localhost:5001/api/auth/register', {
+      const response = await fetch('http://10.0.2.2:5001/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +51,8 @@ export default function SignupScreen({ navigation }) {
         <View style={styles.form}>
           <TextInput
             style={styles.input}
-            placeholder="Email"
+            placeholder="Email 1"
+          
             value={email}
             onChangeText={setEmail}
             autoCapitalize="none"
